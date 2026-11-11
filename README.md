@@ -2,7 +2,7 @@
 
 [中文](#中文) · [English](#english)
 
-[![参考视频](assets/cover.jpg)](assets/demo.mp4)
+https://github.com/user-attachments/assets/731b36fc-19ea-42f8-993d-11081d481e3f
 
 参考视频：用这个 Skill 从零做出来的一条，1 分 45 秒，4 颗星球、23 个镜头。场景是 Blender 代码搭的低多边形 3D，没用 AI 视频模型，也没用任何图片、视频素材。高清文件：[`assets/demo.mp4`](assets/demo.mp4)
 
