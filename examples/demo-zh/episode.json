@@ -1,0 +1,1805 @@
+{
+ "lang": "zh",
+ "handle": "@DDJCXX",
+ "res": [
+  1080,
+  1920
+ ],
+ "voice": {
+  "provider": "edge",
+  "edge_voice": "zh-CN-YunxiNeural",
+  "rate": "-4%"
+ },
+ "intro": {
+  "say": "选一颗星球。|你要在这里活一年。",
+  "countdown": 5
+ },
+ "outro": {
+  "say": "你选了几号？"
+ },
+ "planets": [
+  {
+   "name": "灯塔星球",
+   "globe": {
+    "pattern": "noise",
+    "base": "#2a66b0",
+    "spots": "#e8d39a",
+    "third": "#7fae5a",
+    "amount": 0.6,
+    "scale": 3.5
+   },
+   "set": {
+    "time": "dusk",
+    "ground": "sand",
+    "water": {
+     "z": 0,
+     "col": "#3d5f9c"
+    },
+    "props": [
+     {
+      "type": "island",
+      "id": "isl",
+      "at": [
+       0,
+       0,
+       0
+      ],
+      "r": 9
+     },
+     {
+      "type": "lighthouse",
+      "id": "lh",
+      "at": [
+       0,
+       1.5,
+       0.55
+      ]
+     },
+     {
+      "type": "rock",
+      "scatter": {
+       "n": 14,
+       "r": [
+        8.5,
+        10.5
+       ],
+       "s": [
+        0.8,
+        1.6
+       ],
+       "avoid": [
+        [
+         2.5,
+         -9,
+         3
+        ],
+        [
+         6,
+         -9,
+         3.5
+        ]
+       ]
+      }
+     },
+     {
+      "type": "cloud",
+      "at": [
+       -30,
+       120,
+       40
+      ],
+      "s": 6
+     },
+     {
+      "type": "cloud",
+      "at": [
+       40,
+       150,
+       55
+      ],
+      "s": 8
+     }
+    ],
+    "ground_color": "#7d7558",
+    "ground_z": -1.8,
+    "bumps": 0.05
+   },
+   "shots": [
+    {
+     "say": "这颗星球是一整片海，|只有中间一座小岛。",
+     "scene": {
+      "camera": {
+       "aim": "lh",
+       "dist": 42,
+       "yaw": -28,
+       "pitch": 13,
+       "lens": 30,
+       "aim_z": 3
+      }
+     }
+    },
+    {
+     "say": "海水永远是温的，|鱼会自己游进你的桶里。",
+     "scene": {
+      "props": [
+       {
+        "type": "dock",
+        "at": [
+         2.5,
+         -4,
+         0
+        ],
+        "l": 9
+       },
+       {
+        "type": "hero",
+        "id": "hero",
+        "at": [
+         3.6,
+         -8,
+         0.14
+        ],
+        "pose": "sit",
+        "face": 90
+       },
+       {
+        "type": "bucket",
+        "id": "bk",
+        "at": [
+         3.0,
+         -7.3,
+         0.56
+        ]
+       }
+      ],
+      "camera": {
+       "aim": "hero",
+       "dist": 4.6,
+       "yaw": 55,
+       "pitch": 14,
+       "lens": 30,
+       "aim_z": 0.8
+      }
+     }
+    },
+    {
+     "say": "你住在岛上的白色灯塔里，|晚上它替你亮着灯。",
+     "scene": {
+      "time": "night",
+      "props": [
+       {
+        "type": "hero",
+        "id": "hero",
+        "at": [
+         0.9,
+         -1.2,
+         0.55
+        ],
+        "pose": "back",
+        "face": 200
+       }
+      ],
+      "camera": {
+       "aim": "lh",
+       "dist": 17,
+       "yaw": -24,
+       "pitch": 4,
+       "lens": 28,
+       "aim_z": 5.5
+      }
+     }
+    },
+    {
+     "say": "但是每到满月，|海水会退到看不见的地方。",
+     "mood": "dark",
+     "scene": {
+      "time": "night",
+      "props": [
+       {
+        "type": "moon",
+        "at": [
+         -22,
+         90,
+         34
+        ],
+        "r": 9
+       },
+       {
+        "type": "rock",
+        "scatter": {
+         "n": 40,
+         "r": [
+          12,
+          60
+         ],
+         "s": [
+          0.6,
+          2.2
+         ],
+         "z": -1.8
+        }
+       }
+      ],
+      "anim": [
+       {
+        "id": "water",
+        "z": [
+         [
+          0.3,
+          0
+         ],
+         [
+          3.6,
+          -2.3
+         ]
+        ]
+       }
+      ],
+      "camera": {
+       "aim": "lh",
+       "dist": 34,
+       "yaw": 15,
+       "pitch": 6,
+       "lens": 28,
+       "aim_z": 4
+      }
+     }
+    },
+    {
+     "say": "沙滩上会出现一排脚印，|一直走到你家门口。",
+     "mood": "dark",
+     "push": 0.1,
+     "scene": {
+      "time": "night",
+      "water": null,
+      "props": [
+       {
+        "type": "footprints",
+        "at": [
+         0,
+         -0.2,
+         0.56
+        ],
+        "n": 6,
+        "col": "#2a2619"
+       },
+       {
+        "type": "footprints",
+        "at": [
+         0,
+         -5.3,
+         -1.79
+        ],
+        "n": 18,
+        "col": "#2a2619"
+       },
+       {
+        "type": "moon",
+        "at": [
+         -22,
+         90,
+         34
+        ],
+        "r": 9
+       }
+      ],
+      "camera": {
+       "aim": "lh",
+       "dist": 26,
+       "yaw": 4,
+       "pitch": 6,
+       "lens": 26,
+       "aim_z": 1.5
+      }
+     }
+    },
+    {
+     "say": "满月那晚，别开门。",
+     "mood": "dark",
+     "push": 0.14,
+     "scene": {
+      "time": "night",
+      "water": null,
+      "camera": {
+       "aim": "lh",
+       "dist": 4.4,
+       "yaw": 12,
+       "pitch": 3,
+       "lens": 30,
+       "aim_z": 1.1
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "雪人星球",
+   "globe": {
+    "pattern": "noise",
+    "base": "#eef3f8",
+    "spots": "#a9bfd6",
+    "amount": 0.58,
+    "scale": 4,
+    "moon": true
+   },
+   "set": {
+    "time": "snow",
+    "ground": "snow",
+    "fx": [
+     "snow"
+    ],
+    "props": [
+     {
+      "type": "cabin",
+      "id": "cabin",
+      "at": [
+       0,
+       6,
+       0
+      ],
+      "snow": true
+     },
+     {
+      "type": "pine",
+      "scatter": {
+       "n": 150,
+       "r": [
+        14,
+        80
+       ],
+       "center": [
+        0,
+        6
+       ],
+       "s": [
+        0.9,
+        1.7
+       ]
+      },
+      "snow": true
+     },
+     {
+      "type": "mountain",
+      "at": [
+       -45,
+       150,
+       0
+      ],
+      "h": 55
+     },
+     {
+      "type": "mountain",
+      "at": [
+       30,
+       170,
+       0
+      ],
+      "h": 70
+     },
+     {
+      "type": "rock",
+      "scatter": {
+       "n": 12,
+       "r": [
+        6,
+        14
+       ],
+       "center": [
+        0,
+        6
+       ]
+      },
+      "snow": true
+     }
+    ]
+   },
+   "shots": [
+    {
+     "say": "这颗星球是一整片雪原，|雪永远是软的。",
+     "scene": {
+      "props": [
+       {
+        "type": "hero",
+        "id": "hero",
+        "at": [
+         1.5,
+         -6,
+         0
+        ],
+        "pose": "stand",
+        "face": 180
+       }
+      ],
+      "anim": [
+       {
+        "id": "hero",
+        "move": [
+         [
+          0,
+          0,
+          0,
+          0
+         ],
+         [
+          4.5,
+          -0.3,
+          3.4,
+          0
+         ]
+        ],
+        "walk": true
+       }
+      ],
+      "camera": {
+       "aim": "cabin",
+       "dist": 21,
+       "yaw": -10,
+       "pitch": 7,
+       "lens": 30,
+       "aim_z": 1.6
+      }
+     }
+    },
+    {
+     "say": "热可可永远是满的，|壁炉从来不用添柴。",
+     "scene": {
+      "replace": true,
+      "time": "indoor",
+      "ground": "none",
+      "fx": [
+       "dust"
+      ],
+      "props": [
+       {
+        "type": "room",
+        "w": 6,
+        "d": 5,
+        "h": 3.4,
+        "wall": "#7b5440",
+        "floor": "#5a3b28",
+        "outside": "#b9c9dc"
+       },
+       {
+        "type": "fireplace",
+        "at": [
+         1.4,
+         2.1,
+         0
+        ]
+       },
+       {
+        "type": "chair",
+        "at": [
+         -1.3,
+         0.5,
+         0
+        ],
+        "rot": 20
+       },
+       {
+        "type": "hero",
+        "id": "hero",
+        "at": [
+         -1.3,
+         0.45,
+         0
+        ],
+        "pose": "sit",
+        "face": 20
+       },
+       {
+        "type": "table",
+        "at": [
+         -0.2,
+         -0.3,
+         0
+        ],
+        "w": 0.7,
+        "d": 0.6
+       },
+       {
+        "type": "mug",
+        "at": [
+         -0.2,
+         -0.3,
+         0.8
+        ]
+       }
+      ],
+      "camera": {
+       "aim": "hero",
+       "dist": 4.6,
+       "yaw": -18,
+       "pitch": 12,
+       "lens": 26,
+       "aim_z": 1.0
+      }
+     }
+    },
+    {
+     "say": "你住在一间小木屋里，|窗外站着一个雪人。",
+     "scene": {
+      "time": "dusk",
+      "props": [
+       {
+        "type": "snowman",
+        "id": "sm",
+        "at": [
+         1.8,
+         2.2,
+         0
+        ],
+        "rot": 180
+       }
+      ],
+      "camera": {
+       "aim": "cabin",
+       "dist": 13,
+       "yaw": -28,
+       "pitch": 6,
+       "lens": 28,
+       "aim_z": 1.6
+      }
+     }
+    },
+    {
+     "say": "但是每天早上，|窗外都会多出一个雪人。",
+     "mood": "dark",
+     "scene": {
+      "time": "overcast",
+      "props": [
+       {
+        "type": "snowman",
+        "scatter": {
+         "n": 6,
+         "box": [
+          -6,
+          -3,
+          6,
+          1.5
+         ],
+         "face": 180,
+         "s": [
+          0.95,
+          1.1
+         ]
+        }
+       }
+      ],
+      "camera": {
+       "aim": "cabin",
+       "dist": 15,
+       "yaw": -22,
+       "pitch": 7,
+       "lens": 28,
+       "aim_z": 1.4
+      }
+     }
+    },
+    {
+     "say": "它们都面朝你的窗户，|一天比一天近。",
+     "mood": "dark",
+     "scene": {
+      "time": "overcast",
+      "props": [
+       {
+        "type": "snowman",
+        "scatter": {
+         "n": 14,
+         "box": [
+          -4.5,
+          0.5,
+          4.5,
+          3.2
+         ],
+         "face": 180,
+         "s": [
+          0.95,
+          1.1
+         ]
+        }
+       }
+      ],
+      "camera": {
+       "aim": "cabin",
+       "dist": 12,
+       "yaw": 8,
+       "pitch": 4,
+       "lens": 28,
+       "aim_z": 1.4
+      }
+     }
+    },
+    {
+     "say": "天黑以后，别看窗外。",
+     "mood": "dark",
+     "push": 0.14,
+     "scene": {
+      "time": "night",
+      "props": [
+       {
+        "type": "snowman",
+        "scatter": {
+         "n": 7,
+         "box": [
+          -2.2,
+          2.6,
+          2.2,
+          3.4
+         ],
+         "face": 180,
+         "s": [
+          1.0,
+          1.1
+         ]
+        }
+       }
+      ],
+      "camera": {
+       "aim": "cabin",
+       "dist": 7.5,
+       "yaw": 0,
+       "pitch": 3,
+       "lens": 30,
+       "aim_z": 1.5
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "图书馆星球",
+   "globe": {
+    "pattern": "bands",
+    "base": "#6e4228",
+    "spots": "#e9dcc0",
+    "third": "#b8432f",
+    "amount": 0.5,
+    "scale": 3
+   },
+   "set": {
+    "time": "indoor",
+    "ground": "none",
+    "ambient_strength": 0.35,
+    "fx": [
+     "dust"
+    ],
+    "props": [
+     {
+      "type": "room",
+      "w": 12,
+      "d": 12,
+      "h": 30,
+      "wall": "#3d2a20",
+      "floor": "#6b4a32",
+      "window": false,
+      "ceiling": false
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       -4.8,
+       5.6,
+       0
+      ],
+      "h": 8,
+      "seed": 1
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       -2.4,
+       5.6,
+       0
+      ],
+      "h": 8,
+      "seed": 2
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       0,
+       5.6,
+       0
+      ],
+      "h": 8,
+      "seed": 3
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       2.4,
+       5.6,
+       0
+      ],
+      "h": 8,
+      "seed": 4
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       4.8,
+       5.6,
+       0
+      ],
+      "h": 8,
+      "seed": 5
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       -4.8,
+       5.6,
+       8
+      ],
+      "h": 8,
+      "seed": 6
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       -2.4,
+       5.6,
+       8
+      ],
+      "h": 8,
+      "seed": 7
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       0,
+       5.6,
+       8
+      ],
+      "h": 8,
+      "seed": 8
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       2.4,
+       5.6,
+       8
+      ],
+      "h": 8,
+      "seed": 9
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       4.8,
+       5.6,
+       8
+      ],
+      "h": 8,
+      "seed": 10
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       -5.6,
+       3.2,
+       0
+      ],
+      "rot": 90,
+      "h": 8,
+      "seed": 11
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       -5.6,
+       0.8,
+       0
+      ],
+      "rot": 90,
+      "h": 8,
+      "seed": 12
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       -5.6,
+       -1.6,
+       0
+      ],
+      "rot": 90,
+      "h": 8,
+      "seed": 13
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       5.6,
+       3.2,
+       0
+      ],
+      "rot": -90,
+      "h": 8,
+      "seed": 14
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       5.6,
+       0.8,
+       0
+      ],
+      "rot": -90,
+      "h": 8,
+      "seed": 15
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       5.6,
+       -1.6,
+       0
+      ],
+      "rot": -90,
+      "h": 8,
+      "seed": 16
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       -5.6,
+       3.2,
+       8
+      ],
+      "rot": 90,
+      "h": 8,
+      "seed": 17
+     },
+     {
+      "type": "bookshelf",
+      "at": [
+       5.6,
+       3.2,
+       8
+      ],
+      "rot": -90,
+      "h": 8,
+      "seed": 18
+     },
+     {
+      "type": "lamp",
+      "at": [
+       -3.5,
+       2.5,
+       0
+      ]
+     },
+     {
+      "type": "lamp",
+      "at": [
+       3.5,
+       2.5,
+       0
+      ]
+     }
+    ]
+   },
+   "shots": [
+    {
+     "say": "这颗星球是一整座图书馆，|书架高到看不见顶。",
+     "scene": {
+      "props": [
+       {
+        "type": "hero",
+        "id": "hero",
+        "at": [
+         0,
+         0.5,
+         0
+        ],
+        "pose": "back",
+        "face": 180
+       }
+      ],
+      "camera": {
+       "pos": [
+        0.4,
+        -5.3,
+        0.9
+       ],
+       "look": [
+        0,
+        5,
+        7.5
+       ],
+       "lens": 18
+      }
+     }
+    },
+    {
+     "say": "每一本都是你爱看的，|永远看不完。",
+     "scene": {
+      "props": [
+       {
+        "type": "chair",
+        "at": [
+         1.2,
+         3.4,
+         0
+        ],
+        "rot": 15
+       },
+       {
+        "type": "hero",
+        "id": "hero",
+        "at": [
+         1.2,
+         3.35,
+         0
+        ],
+        "pose": "read",
+        "face": 15
+       },
+       {
+        "type": "table",
+        "at": [
+         2.4,
+         3.2,
+         0
+        ],
+        "w": 0.6,
+        "d": 0.6
+       },
+       {
+        "type": "table_lamp",
+        "at": [
+         2.4,
+         3.2,
+         0.8
+        ]
+       }
+      ],
+      "camera": {
+       "aim": "hero",
+       "dist": 4.0,
+       "yaw": -26,
+       "pitch": 10,
+       "lens": 28,
+       "aim_z": 1.1
+      }
+     }
+    },
+    {
+     "say": "你住在顶楼的阅览室，|台灯一直亮着。",
+     "scene": {
+      "replace": true,
+      "time": "indoor",
+      "ground": "none",
+      "props": [
+       {
+        "type": "room",
+        "w": 6,
+        "d": 5,
+        "h": 3.4,
+        "wall": "#6b4a36",
+        "floor": "#4f3424",
+        "outside": "#22305e"
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         -2.8,
+         0.6,
+         0
+        ],
+        "rot": 90,
+        "h": 3.2,
+        "w": 2.4,
+        "seed": 21
+       },
+       {
+        "type": "table",
+        "at": [
+         0.6,
+         1.4,
+         0
+        ],
+        "w": 1.4,
+        "d": 0.8
+       },
+       {
+        "type": "table_lamp",
+        "at": [
+         1.0,
+         1.55,
+         0.8
+        ]
+       },
+       {
+        "type": "openbook",
+        "at": [
+         0.4,
+         1.3,
+         0.8
+        ]
+       },
+       {
+        "type": "chair",
+        "at": [
+         0.4,
+         0.55,
+         0
+        ],
+        "rot": 180
+       },
+       {
+        "type": "hero",
+        "id": "hero",
+        "at": [
+         0.4,
+         0.62,
+         0
+        ],
+        "pose": "read",
+        "face": 180
+       }
+      ],
+      "camera": {
+       "aim": "hero",
+       "dist": 5.2,
+       "yaw": -32,
+       "pitch": 14,
+       "lens": 24,
+       "aim_z": 1.2
+      }
+     }
+    },
+    {
+     "say": "但是这里的书会自己往下写，|写的是你明天要做的事。",
+     "mood": "dark",
+     "push": 0.1,
+     "scene": {
+      "replace": true,
+      "time": "indoor",
+      "ground": "none",
+      "ambient_strength": 0.15,
+      "props": [
+       {
+        "type": "room",
+        "w": 6,
+        "d": 5,
+        "h": 3.4,
+        "wall": "#6b4a36",
+        "floor": "#4f3424",
+        "outside": "#22305e"
+       },
+       {
+        "type": "table",
+        "at": [
+         0,
+         0,
+         0
+        ],
+        "w": 1.4,
+        "d": 0.8
+       },
+       {
+        "type": "table_lamp",
+        "at": [
+         0.45,
+         0.2,
+         0.8
+        ]
+       },
+       {
+        "type": "openbook",
+        "id": "bk",
+        "at": [
+         0,
+         -0.05,
+         0.8
+        ]
+       }
+      ],
+      "camera": {
+       "aim": "bk",
+       "dist": 1.5,
+       "yaw": -10,
+       "pitch": 48,
+       "lens": 35,
+       "aim_z": 0.8
+      }
+     }
+    },
+    {
+     "say": "书架最深处有一本书，|只剩最后一页。",
+     "mood": "dark",
+     "scene": {
+      "replace": true,
+      "time": "indoor",
+      "ground": "none",
+      "ambient_strength": 0.14,
+      "props": [
+       {
+        "type": "room",
+        "w": 5,
+        "d": 70,
+        "h": 12,
+        "wall": "#2a1d17",
+        "floor": "#3d2a1e",
+        "window": false
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         -1.8,
+         2,
+         0
+        ],
+        "rot": 90,
+        "h": 6,
+        "seed": 31
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         -1.8,
+         4.4,
+         0
+        ],
+        "rot": 90,
+        "h": 6,
+        "seed": 32
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         -1.8,
+         6.8,
+         0
+        ],
+        "rot": 90,
+        "h": 6,
+        "seed": 33
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         -1.8,
+         9.2,
+         0
+        ],
+        "rot": 90,
+        "h": 6,
+        "seed": 34
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         -1.8,
+         11.6,
+         0
+        ],
+        "rot": 90,
+        "h": 6,
+        "seed": 35
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         -1.8,
+         14,
+         0
+        ],
+        "rot": 90,
+        "h": 6,
+        "seed": 36
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         -1.8,
+         16.4,
+         0
+        ],
+        "rot": 90,
+        "h": 6,
+        "seed": 37
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         -1.8,
+         18.8,
+         0
+        ],
+        "rot": 90,
+        "h": 6,
+        "seed": 38
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         1.8,
+         2,
+         0
+        ],
+        "rot": -90,
+        "h": 6,
+        "seed": 41
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         1.8,
+         4.4,
+         0
+        ],
+        "rot": -90,
+        "h": 6,
+        "seed": 42
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         1.8,
+         6.8,
+         0
+        ],
+        "rot": -90,
+        "h": 6,
+        "seed": 43
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         1.8,
+         9.2,
+         0
+        ],
+        "rot": -90,
+        "h": 6,
+        "seed": 44
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         1.8,
+         11.6,
+         0
+        ],
+        "rot": -90,
+        "h": 6,
+        "seed": 45
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         1.8,
+         14,
+         0
+        ],
+        "rot": -90,
+        "h": 6,
+        "seed": 46
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         1.8,
+         16.4,
+         0
+        ],
+        "rot": -90,
+        "h": 6,
+        "seed": 47
+       },
+       {
+        "type": "bookshelf",
+        "at": [
+         1.8,
+         18.8,
+         0
+        ],
+        "rot": -90,
+        "h": 6,
+        "seed": 48
+       },
+       {
+        "type": "table",
+        "at": [
+         0,
+         21,
+         0
+        ],
+        "w": 0.9,
+        "d": 0.7
+       },
+       {
+        "type": "openbook",
+        "id": "bk",
+        "at": [
+         0,
+         21,
+         0.8
+        ],
+        "glow": true,
+        "light": [
+         [
+          [
+           0,
+           0,
+           0.45
+          ],
+          "#ffe2a0",
+          90
+         ]
+        ]
+       },
+       {
+        "type": "lamp",
+        "at": [
+         -1.25,
+         7,
+         0
+        ],
+        "light": [
+         [
+          [
+           0,
+           0,
+           3.1
+          ],
+          "#ffcf8a",
+          35
+         ]
+        ]
+       },
+       {
+        "type": "lamp",
+        "at": [
+         1.25,
+         14,
+         0
+        ],
+        "light": [
+         [
+          [
+           0,
+           0,
+           3.1
+          ],
+          "#ffcf8a",
+          35
+         ]
+        ]
+       }
+      ],
+      "camera": {
+       "pos": [
+        0,
+        -2,
+        1.6
+       ],
+       "look": [
+        0,
+        21,
+        0.9
+       ],
+       "lens": 32
+      }
+     }
+    },
+    {
+     "say": "别翻到最后一页。",
+     "mood": "dark",
+     "push": 0.16,
+     "scene": {
+      "replace": true,
+      "time": "indoor",
+      "ground": "none",
+      "ambient_strength": 0.06,
+      "props": [
+       {
+        "type": "room",
+        "w": 5,
+        "d": 8,
+        "h": 6,
+        "wall": "#2a1d17",
+        "floor": "#3d2a1e",
+        "window": false
+       },
+       {
+        "type": "table",
+        "at": [
+         0,
+         0,
+         0
+        ],
+        "w": 0.9,
+        "d": 0.7
+       },
+       {
+        "type": "openbook",
+        "id": "bk",
+        "at": [
+         0,
+         0,
+         0.8
+        ],
+        "glow": true,
+        "light": [
+         [
+          [
+           0,
+           0,
+           0.4
+          ],
+          "#ffe2a0",
+          25
+         ]
+        ]
+       }
+      ],
+      "camera": {
+       "aim": "bk",
+       "dist": 1.3,
+       "yaw": 0,
+       "pitch": 30,
+       "lens": 35,
+       "aim_z": 0.82
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "云海星球",
+   "mood": "sweet",
+   "globe": {
+    "pattern": "noise",
+    "base": "#f4bfd2",
+    "spots": "#fff3f7",
+    "amount": 0.5,
+    "scale": 2.5,
+    "ring": true,
+    "ring_col": "#f3c64a"
+   },
+   "set": {
+    "time": "sunset",
+    "ground": "#f7d9e4",
+    "bumps": 2.2,
+    "sky": [
+     "#ffc59a",
+     "#8a6bb8"
+    ],
+    "props": [
+     {
+      "type": "cloud",
+      "scatter": {
+       "n": 45,
+       "r": [
+        12,
+        120
+       ],
+       "s": [
+        2.5,
+        5
+       ]
+      },
+      "col": "#fbe3ec"
+     },
+     {
+      "type": "balloon",
+      "scatter": {
+       "n": 7,
+       "r": [
+        35,
+        110
+       ],
+       "z": 10,
+       "s": [
+        0.8,
+        1.2
+       ],
+       "spin": true
+      },
+      "col": "#5aa0d8",
+      "stripe": "#f6f1e6"
+     },
+     {
+      "type": "sun",
+      "at": [
+       -70,
+       260,
+       30
+      ],
+      "r": 16
+     },
+     {
+      "type": "balloon",
+      "id": "bal",
+      "at": [
+       0,
+       8,
+       6
+      ]
+     }
+    ]
+   },
+   "shots": [
+    {
+     "say": "运气不错。|这颗星球是一整片云海。",
+     "scene": {
+      "camera": {
+       "aim": "bal",
+       "dist": 26,
+       "yaw": -20,
+       "pitch": 5,
+       "lens": 30,
+       "aim_z": 4
+      }
+     }
+    },
+    {
+     "say": "你住在一个热气球上，|篮子里有床，也有热茶。",
+     "scene": {
+      "props": [
+       {
+        "type": "hero",
+        "id": "hero",
+        "at": [
+         0,
+         8,
+         6.05
+        ],
+        "pose": "wave",
+        "face": 0
+       }
+      ],
+      "camera": {
+       "aim": "hero",
+       "dist": 6.2,
+       "yaw": -24,
+       "pitch": 5,
+       "lens": 32,
+       "aim_z": 1.5
+      }
+     }
+    },
+    {
+     "say": "风会带你去任何地方，|每天醒来，窗外都不一样。",
+     "scene": {
+      "time": "day",
+      "sky": [
+       "#d7ecff",
+       "#5e9be0"
+      ],
+      "ground": "#ffffff",
+      "props": [
+       {
+        "type": "mountain",
+        "at": [
+         -30,
+         90,
+         -8
+        ],
+        "h": 45
+       },
+       {
+        "type": "mountain",
+        "at": [
+         25,
+         120,
+         -10
+        ],
+        "h": 60
+       },
+       {
+        "type": "mountain",
+        "at": [
+         60,
+         80,
+         -6
+        ],
+        "h": 35
+       },
+       {
+        "type": "hero",
+        "id": "hero",
+        "at": [
+         0,
+         8,
+         6.05
+        ],
+        "pose": "stand",
+        "face": 160
+       }
+      ],
+      "camera": {
+       "aim": "bal",
+       "dist": 18,
+       "yaw": 25,
+       "pitch": 3,
+       "lens": 28,
+       "aim_z": 2
+      }
+     }
+    },
+    {
+     "say": "晚上星星就在手边，|伸手就能摘一颗。",
+     "scene": {
+      "time": "night",
+      "ground": "#2c3160",
+      "stars": true,
+      "props": [
+       {
+        "type": "hero",
+        "id": "hero",
+        "at": [
+         0,
+         8,
+         6.05
+        ],
+        "pose": "wave",
+        "face": 20
+       },
+       {
+        "type": "moon",
+        "at": [
+         30,
+         120,
+         60
+        ],
+        "r": 8
+       },
+       {
+        "type": "table_lamp",
+        "at": [
+         0.55,
+         7.45,
+         6.9
+        ]
+       }
+      ],
+      "camera": {
+       "aim": "hero",
+       "dist": 8,
+       "yaw": -30,
+       "pitch": -10,
+       "lens": 26,
+       "aim_z": 2.2
+      },
+      "sky": [
+       "#26346a",
+       "#070b1f"
+      ]
+     }
+    },
+    {
+     "say": "最后一天，|它会自己飞回家，|把你送到门口。",
+     "scene": {
+      "replace": true,
+      "time": "sunset",
+      "ground": "meadow",
+      "sky": [
+       "#ffc59a",
+       "#8a6bb8"
+      ],
+      "props": [
+       {
+        "type": "house",
+        "id": "home",
+        "at": [
+         0,
+         10,
+         0
+        ],
+        "wall": "#f4ede2",
+        "roof": "#b5523f"
+       },
+       {
+        "type": "balloon",
+        "at": [
+         4.8,
+         6.5,
+         0
+        ]
+       },
+       {
+        "type": "hero",
+        "id": "hero",
+        "at": [
+         2.4,
+         5.2,
+         0
+        ],
+        "pose": "wave",
+        "face": -10
+       },
+       {
+        "type": "tree",
+        "scatter": {
+         "n": 30,
+         "r": [
+          14,
+          60
+         ],
+         "center": [
+          0,
+          10
+         ],
+         "avoid": [
+          [
+           -6,
+           -9,
+           12
+          ]
+         ]
+        }
+       },
+       {
+        "type": "fence",
+        "at": [
+         -8,
+         4,
+         0
+        ],
+        "n": 8
+       },
+       {
+        "type": "flower",
+        "scatter": {
+         "n": 120,
+         "r": [
+          3,
+          14
+         ],
+         "center": [
+          0,
+          4
+         ],
+         "avoid": [
+          [
+           0,
+           10,
+           6
+          ],
+          [
+           6.5,
+           5,
+           2
+          ]
+         ],
+         "face": 0,
+         "s": [
+          0.4,
+          0.6
+         ]
+        },
+        "petal": "#f6a6c1",
+        "center": "#f6e27a",
+        "h": 0.8,
+        "head": 0.18
+       },
+       {
+        "type": "sun",
+        "at": [
+         -70,
+         260,
+         22
+        ],
+        "r": 16
+       }
+      ],
+      "camera": {
+       "aim": "home",
+       "dist": 20,
+       "yaw": -18,
+       "pitch": 7,
+       "lens": 28,
+       "aim_z": 3
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

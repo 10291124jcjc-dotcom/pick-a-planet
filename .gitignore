@@ -1,0 +1,6 @@
+.env
+build/
+examples/*/build/
+examples/*/*.mp4
+examples/*/*_cover.jpg
+__pycache__/
